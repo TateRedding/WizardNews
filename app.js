@@ -88,7 +88,7 @@ app.use((err, req, res, next) => {
   res.status(404).send(html)
 });
 
-const { PORT = 1337 } = process.env;
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
   console.log(`App listening in port ${PORT}`);
